@@ -1,11 +1,11 @@
 {
   "script_version": "1",
   "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567810",
-  "name": "Armbian Home Assistant (Vendor)",
+  "name": "ROCK 5 ITX Armbian Home Assistant (Vendor)",
   "img": "https://roobi.radxa.com/pic/armbian.svg",
   "description": {
-    "zh-CN": "Home Assistant (Vendor)，由第三方维护的 Armbian 镜像。\n请在 Roobi 中使用自定义源进行安装。",
-    "en": "Home Assistant (Vendor) Armbian image maintained by a third party.\nUse the custom source in Roobi to install it."
+    "zh-CN": "Home Assistant (Vendor)，由 Armbian 社区维护并为 ROCK 5 ITX 打包，适用于 Roobi 自定义源安装。\nHome Assistant image tailored for smart-home automation projects.",
+    "en": "Home Assistant (Vendor) is an Armbian image maintained for the ROCK 5 ITX platform and packaged for Roobi.\nHome Assistant image tailored for smart-home automation projects."
   },
   "version": "Armbian_26.2.1_Rock-5-itx_trixie_vendor_6.1.115-homeassistant",
   "author": "Armbian",

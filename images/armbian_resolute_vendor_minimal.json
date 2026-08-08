@@ -1,11 +1,11 @@
 {
   "script_version": "1",
   "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567803",
-  "name": "Armbian Resolute Minimal (Vendor)",
+  "name": "ROCK 5 ITX Armbian Resolute Minimal (Vendor)",
   "img": "https://roobi.radxa.com/pic/armbian.svg",
   "description": {
-    "zh-CN": "Resolute Minimal (Vendor)，由第三方维护的 Armbian 镜像。\n请在 Roobi 中使用自定义源进行安装。",
-    "en": "Resolute Minimal (Vendor) Armbian image maintained by a third party.\nUse the custom source in Roobi to install it."
+    "zh-CN": "Resolute Minimal (Vendor)，由 Armbian 社区维护并为 ROCK 5 ITX 打包，适用于 Roobi 自定义源安装。\nLightweight, server-oriented image suited to headless deployments and custom setups.",
+    "en": "Resolute Minimal (Vendor) is an Armbian image maintained for the ROCK 5 ITX platform and packaged for Roobi.\nLightweight, server-oriented image suited to headless deployments and custom setups."
   },
   "version": "Armbian_26.5.1_Rock-5-itx_resolute_vendor_6.1.115_minimal",
   "author": "Armbian",

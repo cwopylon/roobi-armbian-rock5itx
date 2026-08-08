@@ -1,11 +1,11 @@
 {
   "script_version": "1",
   "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567808",
-  "name": "Armbian Resolute KDE Plasma (Current)",
+  "name": "ROCK 5 ITX Armbian Resolute KDE Plasma (Current)",
   "img": "https://roobi.radxa.com/pic/armbian.svg",
   "description": {
-    "zh-CN": "Resolute KDE Plasma (Current)，由第三方维护的 Armbian 镜像。\n请在 Roobi 中使用自定义源进行安装。",
-    "en": "Resolute KDE Plasma (Current) Armbian image maintained by a third party.\nUse the custom source in Roobi to install it."
+    "zh-CN": "Resolute KDE Plasma (Current)，由 Armbian 社区维护并为 ROCK 5 ITX 打包，适用于 Roobi 自定义源安装。\nDesktop-oriented image with the KDE Plasma environment for everyday use.",
+    "en": "Resolute KDE Plasma (Current) is an Armbian image maintained for the ROCK 5 ITX platform and packaged for Roobi.\nDesktop-oriented image with the KDE Plasma environment for everyday use."
   },
   "version": "Armbian_26.5.1_Rock-5-itx_resolute_current_6.18.34_kde-plasma_desktop",
   "author": "Armbian",

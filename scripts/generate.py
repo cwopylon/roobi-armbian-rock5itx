@@ -187,10 +187,22 @@ def get_pages_base_url() -> str:
     value = os.environ.get("GITHUB_PAGES_BASE_URL")
     if value:
         return value.rstrip("/")
+
     repository = os.environ.get("GITHUB_REPOSITORY")
     if repository and "/" in repository:
         owner, repo_name = repository.split("/", 1)
         return f"https://{owner}.github.io/{repo_name}/images"
+
+    remote_url = os.environ.get("GITHUB_REMOTE_URL")
+    if remote_url:
+        remote_url = remote_url.rstrip("/")
+        if remote_url.endswith(".git"):
+            remote_url = remote_url[:-4]
+        if remote_url.startswith("https://github.com/"):
+            owner_repo = remote_url[len("https://github.com/"):]
+            owner, repo_name = owner_repo.split("/", 1)
+            return f"https://{owner}.github.io/{repo_name}/images"
+
     return "https://example.github.io/roobi-armbian-rock5itx/images"
 
 
@@ -226,8 +238,8 @@ def generate_image(entry: dict, skip_download: bool, force: bool) -> bool:
     if image_path.exists() and not force and version != "unavailable":
         try:
             current = json.loads(image_path.read_text(encoding="utf-8"))
-            if current.get("version") == version:
-                print(f"  Skipping {entry['json_filename']} because the version is unchanged")
+            if current.get("version") == version and current.get("name") == entry["display_name"]:
+                print(f"  Skipping {entry['json_filename']} because the version and name are unchanged")
                 return False
         except json.JSONDecodeError:
             pass
@@ -284,6 +296,7 @@ def main() -> int:
     args = parser.parse_args()
 
     IMAGES_DIR.mkdir(parents=True, exist_ok=True)
+    os.environ.setdefault("GITHUB_REMOTE_URL", "https://github.com/cwopylon/roobi-armbian-rock5itx.git")
     for entry in CATALOG:
         generate_image(entry, skip_download=args.skip_download, force=args.force)
     write_list(CATALOG)
