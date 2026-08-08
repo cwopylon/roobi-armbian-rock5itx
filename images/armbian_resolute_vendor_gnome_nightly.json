@@ -1,0 +1,30 @@
+{
+  "script_version": "1",
+  "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567814",
+  "name": "ROCK 5 ITX Armbian Resolute GNOME (Nightly)",
+  "img": "https://roobi.radxa.com/pic/armbian.svg",
+  "description": {
+    "zh-CN": "Resolute GNOME (Nightly)，由 Armbian 社区维护并为 ROCK 5 ITX 打包，适用于 Roobi 自定义源安装。\nDesktop-oriented image with a full GNOME environment for everyday use.",
+    "en": "Resolute GNOME (Nightly) is an Armbian image maintained for the ROCK 5 ITX platform and packaged for Roobi.\nDesktop-oriented image with a full GNOME environment for everyday use."
+  },
+  "version": "unavailable",
+  "author": "Armbian",
+  "date": "2026-08-08",
+  "download": [
+    {
+      "file_name": "Resolute_vendor_gnome.img.xz",
+      "size": 0,
+      "urls": [
+        "https://dl.armbian.com/nightly/rock-5-itx/Resolute_vendor_gnome"
+      ],
+      "md5": ""
+    }
+  ],
+  "scripts": [
+    {
+      "type": "auto",
+      "text": "start",
+      "size": 1500000000
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "script_version": "1",
+  "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567813",
+  "name": "ROCK 5 ITX Armbian Forky Minimal (Nightly)",
+  "img": "https://roobi.radxa.com/pic/armbian.svg",
+  "description": {
+    "zh-CN": "Forky Minimal (Nightly)，由 Armbian 社区维护并为 ROCK 5 ITX 打包，适用于 Roobi 自定义源安装。\nLightweight, server-oriented image suited to headless deployments and custom setups.",
+    "en": "Forky Minimal (Nightly) is an Armbian image maintained for the ROCK 5 ITX platform and packaged for Roobi.\nLightweight, server-oriented image suited to headless deployments and custom setups."
+  },
+  "version": "unavailable",
+  "author": "Armbian",
+  "date": "2026-08-08",
+  "download": [
+    {
+      "file_name": "Forky_vendor_minimal.img.xz",
+      "size": 0,
+      "urls": [
+        "https://dl.armbian.com/nightly/rock-5-itx/Forky_vendor_minimal"
+      ],
+      "md5": ""
+    }
+  ],
+  "scripts": [
+    {
+      "type": "auto",
+      "text": "start",
+      "size": 1500000000
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "script_version": "1",
+  "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567809",
+  "name": "Armbian Kali Linux (Vendor)",
+  "img": "https://roobi.radxa.com/pic/armbian.svg",
+  "description": {
+    "zh-CN": "Kali Linux (Vendor)，由第三方维护的 Armbian 镜像。\n请在 Roobi 中使用自定义源进行安装。",
+    "en": "Kali Linux (Vendor) Armbian image maintained by a third party.\nUse the custom source in Roobi to install it."
+  },
+  "version": "Armbian_26.2.1_Rock-5-itx_sid_vendor_6.1.115-kali",
+  "author": "Armbian",
+  "date": "2026-08-08",
+  "download": [
+    {
+      "file_name": "Armbian_26.2.1_Rock-5-itx_sid_vendor_6.1.115-kali.img.xz",
+      "size": 0,
+      "urls": [
+        "https://dl.armbian.com/rock-5-itx/Sid_vendor_server-kali"
+      ],
+      "md5": ""
+    }
+  ],
+  "scripts": [
+    {
+      "type": "auto",
+      "text": "start",
+      "size": 1500000000
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567801",
+    "name": "ROCK 5 ITX Armbian Trixie Minimal (Vendor)",
+    "url": "https://example.github.io/roobi-armbian-rock5itx/images/armbian_trixie_vendor_minimal.json"
+  },
+  {
+    "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567802",
+    "name": "ROCK 5 ITX Armbian Trixie Minimal (Current)",
+    "url": "https://example.github.io/roobi-armbian-rock5itx/images/armbian_trixie_current_minimal.json"
+  },
+  {
+    "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567803",
+    "name": "ROCK 5 ITX Armbian Resolute Minimal (Vendor)",
+    "url": "https://example.github.io/roobi-armbian-rock5itx/images/armbian_resolute_vendor_minimal.json"
+  },
+  {
+    "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567804",
+    "name": "ROCK 5 ITX Armbian Resolute Minimal (Current)",
+    "url": "https://example.github.io/roobi-armbian-rock5itx/images/armbian_resolute_current_minimal.json"
+  },
+  {
+    "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567805",
+    "name": "ROCK 5 ITX Armbian Resolute GNOME (Vendor)",
+    "url": "https://example.github.io/roobi-armbian-rock5itx/images/armbian_resolute_vendor_gnome.json"
+  },
+  {
+    "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567806",
+    "name": "ROCK 5 ITX Armbian Resolute GNOME (Current)",
+    "url": "https://example.github.io/roobi-armbian-rock5itx/images/armbian_resolute_current_gnome.json"
+  },
+  {
+    "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567807",
+    "name": "ROCK 5 ITX Armbian Resolute KDE Plasma (Vendor)",
+    "url": "https://example.github.io/roobi-armbian-rock5itx/images/armbian_resolute_vendor_kde.json"
+  },
+  {
+    "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567808",
+    "name": "ROCK 5 ITX Armbian Resolute KDE Plasma (Current)",
+    "url": "https://example.github.io/roobi-armbian-rock5itx/images/armbian_resolute_current_kde.json"
+  },
+  {
+    "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567809",
+    "name": "ROCK 5 ITX Armbian Kali Linux (Vendor)",
+    "url": "https://example.github.io/roobi-armbian-rock5itx/images/armbian_sid_vendor_kali.json"
+  },
+  {
+    "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567810",
+    "name": "ROCK 5 ITX Armbian Home Assistant (Vendor)",
+    "url": "https://example.github.io/roobi-armbian-rock5itx/images/armbian_trixie_vendor_homeassistant.json"
+  },
+  {
+    "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567811",
+    "name": "ROCK 5 ITX Armbian OpenMediaVault (Vendor)",
+    "url": "https://example.github.io/roobi-armbian-rock5itx/images/armbian_trixie_vendor_omv.json"
+  },
+  {
+    "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567812",
+    "name": "ROCK 5 ITX Armbian openHAB (Vendor)",
+    "url": "https://example.github.io/roobi-armbian-rock5itx/images/armbian_trixie_vendor_openhab.json"
+  },
+  {
+    "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567813",
+    "name": "ROCK 5 ITX Armbian Forky Minimal (Nightly)",
+    "url": "https://example.github.io/roobi-armbian-rock5itx/images/armbian_forky_vendor_minimal.json"
+  },
+  {
+    "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567814",
+    "name": "ROCK 5 ITX Armbian Resolute GNOME (Nightly)",
+    "url": "https://example.github.io/roobi-armbian-rock5itx/images/armbian_resolute_vendor_gnome_nightly.json"
+  }
+]
