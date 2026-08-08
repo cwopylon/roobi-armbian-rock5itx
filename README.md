@@ -18,7 +18,7 @@ Use that URL as the custom source in Roobi.
 - `.github/workflows/deploy-pages.yml` — builds and publishes the GitHub Pages site from the repository root
 - `scripts/generate.py` — generates the manifests and catalog JSON files
 - `images/` — the generated Roobi image manifests and `list.json`
-- `index.html` and `.nojekyll` — the GitHub Pages landing page and static-file support
+- `index.html` and `.nojekyll` — the GitHub Pages landing page and static-file support for the JSON catalog and manifests
 
 ## How it works
 
