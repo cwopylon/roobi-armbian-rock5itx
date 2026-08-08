@@ -1,24 +1,31 @@
 # Roobi OS custom source for Armbian on ROCK 5 ITX
 
-This repository hosts a Roobi-compatible source catalog for Armbian images for the ROCK 5 ITX platform. The workflow and generator in this repo produce the two-tier JSON structure described in the implementation plan:
+This repository hosts a Roobi-compatible source catalog for Armbian images for the ROCK 5 ITX platform. It generates a catalog file plus one manifest per image, publishes them through GitHub Pages, and refreshes them automatically with GitHub Actions.
 
-- a catalog file in `images/list.json`
-- one manifest per image under `images/`
+## Current status
 
-The manifest names and descriptions are intentionally polished so they appear clearly in Roobi as ROCK 5 ITX-specific options.
+The live catalog for this repository is available at:
+
+```text
+https://cwopylon.github.io/roobi-armbian-rock5itx/images/list.json
+```
+
+Use that URL as the custom source in Roobi.
 
 ## Repository layout
 
-- `.github/workflows/update-images.yml` — scheduled and manual refresh workflow
-- `scripts/generate.py` — generator for the manifests and catalog
-- `images/` — generated JSON artifacts for Roobi
+- `.github/workflows/update-images.yml` — refreshes the manifests on a schedule or manually
+- `.github/workflows/deploy-pages.yml` — builds and publishes the GitHub Pages site from the repository root
+- `scripts/generate.py` — generates the manifests and catalog JSON files
+- `images/` — the generated Roobi image manifests and `list.json`
+- `index.html` and `.nojekyll` — the GitHub Pages landing page and static-file support
 
 ## How it works
 
-1. The workflow runs daily and can also be triggered manually.
-2. The generator polls the Armbian `.sha` files for each ROCK 5 ITX endpoint.
-3. It writes a per-image JSON manifest and refreshes the shared catalog.
-4. Any changed artifacts are committed and pushed back to the repository.
+1. The update workflow checks the Armbian `.sha` files for each ROCK 5 ITX endpoint.
+2. The generator writes one manifest per image and refreshes the shared catalog.
+3. The deploy workflow publishes the repository contents to GitHub Pages.
+4. Any updated artifacts are committed and pushed back to the repository.
 
 ## Local generation
 
@@ -28,7 +35,7 @@ Run the generator locally with:
 python3 scripts/generate.py --skip-download
 ```
 
-Use the full download path for production refreshes:
+Use the full download path when you want the generator to download the image archives and compute MD5 values:
 
 ```bash
 python3 scripts/generate.py
@@ -36,32 +43,17 @@ python3 scripts/generate.py
 
 ## GitHub Pages publishing
 
-The repository is prepared for a first GitHub Pages publish from the repository root:
+The repository is prepared to publish from the repository root through GitHub Actions.
 
-- a root `index.html` landing page is included for the published site
-- a `.nojekyll` file is included so static JSON content is served without Jekyll processing
-- the generated catalog is available at `images/list.json`
+Recommended GitHub Pages settings:
 
-After Pages is enabled in GitHub, use these settings:
+- Source: GitHub Actions
+- Branch: `main` (for the repository content)
 
-- Source: Deploy from a branch
-- Branch: `main`
-- Folder: `/ (root)`
-
-Once the site is live, the public catalog URL will be:
-
-```text
-https://<your-username>.github.io/roobi-armbian-rock5itx/images/list.json
-```
-
-Add that exact URL as a custom source in Roobi.
-
-```text
-https://<your-username>.github.io/roobi-armbian-rock5itx/images/list.json
-```
+Once the workflow finishes, the catalog will be served at the URL above.
 
 ## Notes
 
-- The manifest schema follows the Roobi expectations from the provided implementation plan.
+- The manifest schema follows the Roobi expectations from the implementation plan.
 - The workflow uses the Armbian endpoint names directly so the latest builds remain available without hand editing.
 - The same UUIDs are reused for each image to keep Roobi's image tracking stable.
