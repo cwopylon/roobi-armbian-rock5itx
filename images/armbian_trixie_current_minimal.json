@@ -13,7 +13,7 @@
   "download": [
     {
       "file_name": "Armbian_26.5.1_Rock-5-itx_trixie_current_6.18.34_minimal.img.xz",
-      "size": 0,
+      "size": 330083944,
       "urls": [
         "https://dl.armbian.com/rock-5-itx/Trixie_current_minimal"
       ],
@@ -24,7 +24,7 @@
     {
       "type": "auto",
       "text": "start",
-      "size": 1500000000
+      "size": 1320335776
     }
   ]
 }

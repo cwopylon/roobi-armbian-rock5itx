@@ -120,17 +120,54 @@ def fetch_text(url: str) -> str:
         return response.read().decode("utf-8", errors="replace")
 
 
+def parse_content_length(header_value):
+    if not header_value:
+        return None
+    try:
+        return int(header_value)
+    except ValueError:
+        return None
+
+
+def fetch_size(url):
+    request = Request(url, method="HEAD", headers={"User-Agent": "roobi-armbian-generator/1.0"})
+    try:
+        with urlopen(request, timeout=60) as response:
+            size = parse_content_length(response.headers.get("Content-Length"))
+            return size if size is not None else 0
+    except (HTTPError, URLError, TimeoutError):
+        return 0
+
+
+def should_skip_existing_manifest(image_path, display_name, version):
+    if not image_path.exists():
+        return False
+    try:
+        current = json.loads(image_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return False
+    if current.get("version") != version or current.get("name") != display_name:
+        return False
+    downloads = current.get("download") or []
+    if not downloads or not isinstance(downloads[0], dict):
+        return False
+    size = downloads[0].get("size")
+    return isinstance(size, int) and size > 0
+
+
 def fetch_bytes(url: str, destination: Path) -> int:
     request = Request(url, headers={"User-Agent": "roobi-armbian-generator/1.0"})
     with urlopen(request, timeout=300) as response:
-        content_length = response.headers.get("Content-Length")
-        size = int(content_length) if content_length and content_length.isdigit() else 0
+        content_length = parse_content_length(response.headers.get("Content-Length"))
+        size = content_length if content_length is not None else 0
         with destination.open("wb") as handle:
             while True:
                 chunk = response.read(1024 * 1024)
                 if not chunk:
                     break
                 handle.write(chunk)
+        if size == 0:
+            size = destination.stat().st_size
         return size
 
 
@@ -235,25 +272,29 @@ def generate_image(entry: dict, skip_download: bool, force: bool) -> bool:
     except (HTTPError, URLError, TimeoutError, ValueError) as exc:
         print(f"  Unable to fetch .sha metadata from {sha_url}: {exc}")
 
-    if image_path.exists() and not force and version != "unavailable":
-        try:
-            current = json.loads(image_path.read_text(encoding="utf-8"))
-            if current.get("version") == version and current.get("name") == entry["display_name"]:
-                print(f"  Skipping {entry['json_filename']} because the version and name are unchanged")
-                return False
-        except json.JSONDecodeError:
-            pass
+    if image_path.exists() and not force and version != "unavailable" and should_skip_existing_manifest(image_path, entry["display_name"], version):
+        print(f"  Skipping {entry['json_filename']} because the version, name, and size are unchanged")
+        return False
 
-    if version != "unavailable" and not skip_download:
-        with tempfile.TemporaryDirectory(prefix="armbian-", dir=str(ROOT)) as tmp_dir:
-            tmp_path = Path(tmp_dir) / filename
-            try:
-                compressed_size = fetch_bytes(download_url, tmp_path)
-                md5_value = md5_file(tmp_path)
-                uncompressed_size = estimate_uncompressed_size(entry["display_name"], compressed_size)
-                print(f"  Downloaded {filename} ({compressed_size} bytes, md5={md5_value})")
-            except (HTTPError, URLError, TimeoutError) as exc:
-                print(f"  Download failed for {download_url}: {exc}; falling back to metadata-only output")
+    if version != "unavailable":
+        compressed_size = fetch_size(download_url)
+        if not skip_download:
+            with tempfile.TemporaryDirectory(prefix="armbian-", dir=str(ROOT)) as tmp_dir:
+                tmp_path = Path(tmp_dir) / filename
+                try:
+                    compressed_size = fetch_bytes(download_url, tmp_path)
+                    md5_value = md5_file(tmp_path)
+                    uncompressed_size = estimate_uncompressed_size(entry["display_name"], compressed_size)
+                    print(f"  Downloaded {filename} ({compressed_size} bytes, md5={md5_value})")
+                except (HTTPError, URLError, TimeoutError) as exc:
+                    print(f"  Download failed for {download_url}: {exc}; falling back to metadata-only output")
+                    compressed_size = fetch_size(download_url)
+                    md5_value = ""
+                    uncompressed_size = estimate_uncompressed_size(entry["display_name"], compressed_size)
+        else:
+            md5_value = ""
+            uncompressed_size = estimate_uncompressed_size(entry["display_name"], compressed_size)
+            print(f"  Size probe for {filename}: {compressed_size} bytes")
 
     record = {
         "script_version": "1",
