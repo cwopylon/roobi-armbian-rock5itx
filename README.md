@@ -4,6 +4,8 @@ This repository hosts a Roobi-compatible source catalog for Armbian images for t
 
 ## Current status
 
+> Disclaimer: This repository is maintained for personal use on a Radxa ROCK 5 ITX setup. It is intended as a practical, self-hosted reference for installing Armbian through Roobi and is not a production-grade support channel or a guaranteed long-term distribution platform.
+
 The live catalog for this repository is available at:
 
 ```text
