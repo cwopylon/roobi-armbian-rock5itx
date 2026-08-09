@@ -7,13 +7,13 @@
     "zh-CN": "openHAB (Vendor)，由 Armbian 社区维护并为 ROCK 5 ITX 打包，适用于 Roobi 自定义源安装。\nopenHAB image for home automation and device control.",
     "en": "openHAB (Vendor) is an Armbian image maintained for the ROCK 5 ITX platform and packaged for Roobi.\nopenHAB image for home automation and device control."
   },
-  "version": "Armbian_26.2.1_Rock-5-itx_trixie_vendor_6.1.115-openhab",
+  "version": "unavailable",
   "author": "Armbian",
-  "date": "2026-08-08",
+  "date": "2026-08-09",
   "download": [
     {
-      "file_name": "Armbian_26.2.1_Rock-5-itx_trixie_vendor_6.1.115-openhab.img.xz",
-      "size": 1256897984,
+      "file_name": "Trixie_vendor_server-openhab.img.xz",
+      "size": 0,
       "urls": [
         "https://dl.armbian.com/rock-5-itx/Trixie_vendor_server-openhab"
       ],
@@ -24,7 +24,7 @@
     {
       "type": "auto",
       "text": "start",
-      "size": 5027591936
+      "size": 1500000000
     }
   ]
 }

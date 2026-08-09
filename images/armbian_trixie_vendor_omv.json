@@ -7,24 +7,24 @@
     "zh-CN": "OpenMediaVault (Vendor)，由 Armbian 社区维护并为 ROCK 5 ITX 打包，适用于 Roobi 自定义源安装。\nOpenMediaVault image for NAS and storage-focused deployments.",
     "en": "OpenMediaVault (Vendor) is an Armbian image maintained for the ROCK 5 ITX platform and packaged for Roobi.\nOpenMediaVault image for NAS and storage-focused deployments."
   },
-  "version": "Armbian_26.2.1_Rock-5-itx_trixie_vendor_6.1.115-omv_minimal",
+  "version": "Armbian_26.8.1_Rock-5-itx_trixie_vendor_6.1.115-omv_minimal",
   "author": "Armbian",
-  "date": "2026-08-08",
+  "date": "2026-08-09",
   "download": [
     {
-      "file_name": "Armbian_26.2.1_Rock-5-itx_trixie_vendor_6.1.115-omv_minimal.img.xz",
-      "size": 406371696,
+      "file_name": "Armbian_26.8.1_Rock-5-itx_trixie_vendor_6.1.115-omv_minimal.img.xz",
+      "size": 431148292,
       "urls": [
         "https://dl.armbian.com/rock-5-itx/Trixie_vendor_minimal-omv"
       ],
-      "md5": ""
+      "md5": "77a85a1a7fb651ecdb95c7cd918bc5d9"
     }
   ],
   "scripts": [
     {
       "type": "auto",
       "text": "start",
-      "size": 1625486784
+      "size": 1724593168
     }
   ]
 }

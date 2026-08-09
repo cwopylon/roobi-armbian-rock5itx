@@ -7,24 +7,24 @@
     "zh-CN": "Kali Linux (Vendor)，由 Armbian 社区维护并为 ROCK 5 ITX 打包，适用于 Roobi 自定义源安装。\nSecurity-focused Kali Linux image for penetration testing and specialist workflows.",
     "en": "Kali Linux (Vendor) is an Armbian image maintained for the ROCK 5 ITX platform and packaged for Roobi.\nSecurity-focused Kali Linux image for penetration testing and specialist workflows."
   },
-  "version": "Armbian_26.2.1_Rock-5-itx_sid_vendor_6.1.115-kali",
+  "version": "Armbian_26.8.1_Rock-5-itx_sid_vendor_6.1.115-kali",
   "author": "Armbian",
-  "date": "2026-08-08",
+  "date": "2026-08-09",
   "download": [
     {
-      "file_name": "Armbian_26.2.1_Rock-5-itx_sid_vendor_6.1.115-kali.img.xz",
-      "size": 570210072,
+      "file_name": "Armbian_26.8.1_Rock-5-itx_sid_vendor_6.1.115-kali.img.xz",
+      "size": 812595568,
       "urls": [
         "https://dl.armbian.com/rock-5-itx/Sid_vendor_server-kali"
       ],
-      "md5": ""
+      "md5": "ded19deae363c6bb7e7a002671bf1662"
     }
   ],
   "scripts": [
     {
       "type": "auto",
       "text": "start",
-      "size": 2280840288
+      "size": 3250382272
     }
   ]
 }
