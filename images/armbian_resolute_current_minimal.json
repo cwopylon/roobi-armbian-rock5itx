@@ -7,13 +7,13 @@
     "zh-CN": "Resolute Minimal (Current)，由 Armbian 社区维护并为 ROCK 5 ITX 打包，适用于 Roobi 自定义源安装。\nLightweight, server-oriented image suited to headless deployments and custom setups.",
     "en": "Resolute Minimal (Current) is an Armbian image maintained for the ROCK 5 ITX platform and packaged for Roobi.\nLightweight, server-oriented image suited to headless deployments and custom setups."
   },
-  "version": "Armbian_26.5.1_Rock-5-itx_resolute_current_6.18.34_minimal",
+  "version": "unavailable",
   "author": "Armbian",
-  "date": "2026-08-08",
+  "date": "2026-08-15",
   "download": [
     {
-      "file_name": "Armbian_26.5.1_Rock-5-itx_resolute_current_6.18.34_minimal.img.xz",
-      "size": 333882008,
+      "file_name": "Resolute_current_minimal.img.xz",
+      "size": 0,
       "urls": [
         "https://dl.armbian.com/rock-5-itx/Resolute_current_minimal"
       ],
@@ -24,7 +24,7 @@
     {
       "type": "auto",
       "text": "start",
-      "size": 1335528032
+      "size": 1500000000
     }
   ]
 }

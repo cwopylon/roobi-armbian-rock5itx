@@ -7,24 +7,24 @@
     "zh-CN": "Home Assistant (Vendor)，由 Armbian 社区维护并为 ROCK 5 ITX 打包，适用于 Roobi 自定义源安装。\nHome Assistant image tailored for smart-home automation projects.",
     "en": "Home Assistant (Vendor) is an Armbian image maintained for the ROCK 5 ITX platform and packaged for Roobi.\nHome Assistant image tailored for smart-home automation projects."
   },
-  "version": "Armbian_26.8.1_Rock-5-itx_trixie_vendor_6.1.115-homeassistant",
+  "version": "unavailable",
   "author": "Armbian",
-  "date": "2026-08-09",
+  "date": "2026-08-15",
   "download": [
     {
-      "file_name": "Armbian_26.8.1_Rock-5-itx_trixie_vendor_6.1.115-homeassistant.img.xz",
-      "size": 584242728,
+      "file_name": "Trixie_vendor_server-homeassistant.img.xz",
+      "size": 0,
       "urls": [
         "https://dl.armbian.com/rock-5-itx/Trixie_vendor_server-homeassistant"
       ],
-      "md5": "50c897bd06a26f06973d74e911a87edf"
+      "md5": ""
     }
   ],
   "scripts": [
     {
       "type": "auto",
       "text": "start",
-      "size": 2336970912
+      "size": 1500000000
     }
   ]
 }

@@ -7,13 +7,13 @@
     "zh-CN": "Resolute GNOME (Vendor)，由 Armbian 社区维护并为 ROCK 5 ITX 打包，适用于 Roobi 自定义源安装。\nDesktop-oriented image with a full GNOME environment for everyday use.",
     "en": "Resolute GNOME (Vendor) is an Armbian image maintained for the ROCK 5 ITX platform and packaged for Roobi.\nDesktop-oriented image with a full GNOME environment for everyday use."
   },
-  "version": "Armbian_26.5.1_Rock-5-itx_resolute_vendor_6.1.115_gnome_desktop",
+  "version": "unavailable",
   "author": "Armbian",
-  "date": "2026-08-08",
+  "date": "2026-08-15",
   "download": [
     {
-      "file_name": "Armbian_26.5.1_Rock-5-itx_resolute_vendor_6.1.115_gnome_desktop.img.xz",
-      "size": 1175891116,
+      "file_name": "Resolute_vendor_gnome.img.xz",
+      "size": 0,
       "urls": [
         "https://dl.armbian.com/rock-5-itx/Resolute_vendor_gnome"
       ],
@@ -24,7 +24,7 @@
     {
       "type": "auto",
       "text": "start",
-      "size": 3527673348
+      "size": 1500000000
     }
   ]
 }
