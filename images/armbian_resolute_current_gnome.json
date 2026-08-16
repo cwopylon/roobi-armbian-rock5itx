@@ -7,24 +7,24 @@
     "zh-CN": "Resolute GNOME (Current)，由 Armbian 社区维护并为 ROCK 5 ITX 打包，适用于 Roobi 自定义源安装。\nDesktop-oriented image with a full GNOME environment for everyday use.",
     "en": "Resolute GNOME (Current) is an Armbian image maintained for the ROCK 5 ITX platform and packaged for Roobi.\nDesktop-oriented image with a full GNOME environment for everyday use."
   },
-  "version": "unavailable",
+  "version": "Armbian_26.5.1_Rock-5-itx_resolute_current_6.18.34_gnome_desktop",
   "author": "Armbian",
-  "date": "2026-08-15",
+  "date": "2026-08-16",
   "download": [
     {
-      "file_name": "Resolute_current_gnome.img.xz",
-      "size": 0,
+      "file_name": "Armbian_26.5.1_Rock-5-itx_resolute_current_6.18.34_gnome_desktop.img.xz",
+      "size": 1209127444,
       "urls": [
         "https://dl.armbian.com/rock-5-itx/Resolute_current_gnome"
       ],
-      "md5": ""
+      "md5": "d223d66105ecddd943f3350eb159ba30"
     }
   ],
   "scripts": [
     {
       "type": "auto",
       "text": "start",
-      "size": 1500000000
+      "size": 3627382332
     }
   ]
 }

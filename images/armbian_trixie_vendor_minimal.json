@@ -7,24 +7,24 @@
     "zh-CN": "Trixie Minimal (Vendor)，由 Armbian 社区维护并为 ROCK 5 ITX 打包，适用于 Roobi 自定义源安装。\nLightweight, server-oriented image suited to headless deployments and custom setups.",
     "en": "Trixie Minimal (Vendor) is an Armbian image maintained for the ROCK 5 ITX platform and packaged for Roobi.\nLightweight, server-oriented image suited to headless deployments and custom setups."
   },
-  "version": "unavailable",
+  "version": "Armbian_26.5.1_Rock-5-itx_trixie_vendor_6.1.115_minimal",
   "author": "Armbian",
-  "date": "2026-08-15",
+  "date": "2026-08-16",
   "download": [
     {
-      "file_name": "Trixie_vendor_minimal.img.xz",
-      "size": 0,
+      "file_name": "Armbian_26.5.1_Rock-5-itx_trixie_vendor_6.1.115_minimal.img.xz",
+      "size": 302360188,
       "urls": [
         "https://dl.armbian.com/rock-5-itx/Trixie_vendor_minimal"
       ],
-      "md5": ""
+      "md5": "6676a4a59de564c3c978ab411467e7a0"
     }
   ],
   "scripts": [
     {
       "type": "auto",
       "text": "start",
-      "size": 1500000000
+      "size": 1209440752
     }
   ]
 }

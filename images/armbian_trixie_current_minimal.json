@@ -7,24 +7,24 @@
     "zh-CN": "Trixie Minimal (Current)，由 Armbian 社区维护并为 ROCK 5 ITX 打包，适用于 Roobi 自定义源安装。\nLightweight, server-oriented image suited to headless deployments and custom setups.",
     "en": "Trixie Minimal (Current) is an Armbian image maintained for the ROCK 5 ITX platform and packaged for Roobi.\nLightweight, server-oriented image suited to headless deployments and custom setups."
   },
-  "version": "unavailable",
+  "version": "Armbian_26.5.1_Rock-5-itx_trixie_current_6.18.34_minimal",
   "author": "Armbian",
-  "date": "2026-08-15",
+  "date": "2026-08-16",
   "download": [
     {
-      "file_name": "Trixie_current_minimal.img.xz",
-      "size": 0,
+      "file_name": "Armbian_26.5.1_Rock-5-itx_trixie_current_6.18.34_minimal.img.xz",
+      "size": 330083944,
       "urls": [
         "https://dl.armbian.com/rock-5-itx/Trixie_current_minimal"
       ],
-      "md5": ""
+      "md5": "b989e3b9c2fcde317581f7658cf86687"
     }
   ],
   "scripts": [
     {
       "type": "auto",
       "text": "start",
-      "size": 1500000000
+      "size": 1320335776
     }
   ]
 }
