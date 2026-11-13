@@ -7,24 +7,24 @@
     "zh-CN": "Resolute Minimal (Vendor)，由 Armbian 社区维护并为 ROCK 5 ITX 打包，适用于 Roobi 自定义源安装。\nLightweight, server-oriented image suited to headless deployments and custom setups.",
     "en": "Resolute Minimal (Vendor) is an Armbian image maintained for the ROCK 5 ITX platform and packaged for Roobi.\nLightweight, server-oriented image suited to headless deployments and custom setups."
   },
-  "version": "unavailable",
+  "version": "Armbian_26.8.6_Rock-5-itx_resolute_vendor_6.1.172_minimal",
   "author": "Armbian",
-  "date": "2026-11-12",
+  "date": "2026-11-13",
   "download": [
     {
-      "file_name": "Resolute_vendor_minimal.img.xz",
-      "size": 0,
+      "file_name": "Armbian_26.8.6_Rock-5-itx_resolute_vendor_6.1.172_minimal.img.xz",
+      "size": 330755592,
       "urls": [
         "https://dl.armbian.com/rock-5-itx/Resolute_vendor_minimal"
       ],
-      "md5": ""
+      "md5": "dd352876f37d917894687d3acea2efe8"
     }
   ],
   "scripts": [
     {
       "type": "auto",
       "text": "start",
-      "size": 1500000000
+      "size": 1323022368
     }
   ]
 }
